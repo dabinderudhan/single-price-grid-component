@@ -1,4 +1,13 @@
 .grid {
   display: grid;
+}
+
+.grid-row {
   grid-template-rows: repeat(3, 1fr);
+}
+
+@media (min-width: 768px) {
+  .grid-row {
+    grid-template-rows: repeat(2, min-content);
+  }
 }

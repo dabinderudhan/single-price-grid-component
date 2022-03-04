@@ -45,6 +45,7 @@
     }
 
     & button {
+      cursor: pointer;
       width: 100%;
       background-color: $color-primary-yellow;
       color: $color-neutral-light;
@@ -56,6 +57,12 @@
       letter-spacing: 1px;
       box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.1);
       margin-top: 1rem;
+      transition: all ease-in-out 0.1s;
+
+      &:hover {
+        transform: scale(1.06);
+        background-color: hsl(71, 73%, 45%);
+      }
     }
   }
 
@@ -72,21 +79,34 @@
       font-weight: $fw-default;
       align-items: start;
       gap: 0.2rem;
+      color: hsl(179, 62%, 80%);
     }
   }
 }
 
-@media (min-width: 375px) {
+@media (min-width: 768px) {
   .section {
-    &--top {
+    padding: 2.5625rem;
+
+    &-top {
       grid-area: top;
+      height: min-content;
+
+      &--subheading {
+        font-size: 1.2rem;
+      }
+
+      &--para {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
     }
 
-    &--left {
+    &-left {
       grid-area: left;
     }
 
-    &--right {
+    &-right {
       grid-area: right;
     }
   }

@@ -8,6 +8,7 @@
 
 body {
   min-height: 100vh;
+  background-color: hsl(0, 0, 0);
 }
 
 li {
@@ -23,11 +24,13 @@ main {
 .container {
   border-radius: 5px;
   overflow: hidden;
+  box-shadow: 5px 8px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 375px) {
+@media (min-width: 768px) {
   main {
     max-width: 1440px;
+    padding: clamp(5rem, 7%, 10rem) clamp(10rem, 20%, 25rem);
   }
 
   .container {
@@ -35,6 +38,6 @@ main {
       "top top"
       "left right";
 
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 20rem);
   }
 }
