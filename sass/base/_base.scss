@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  max-width: 375px;
+  background-color: $color-neutral-light;
+  padding: 4.5rem 2rem;
+}
+
+.container {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+@media (min-width: 375px) {
+  main {
+    max-width: 1440px;
+  }
+
+  .container {
+    grid-template-areas:
+      "top top"
+      "left right";
+
+    grid-template-columns: 1fr;
+  }
+}
